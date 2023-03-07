@@ -14,15 +14,15 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
 
   // calculate new deposit total
   const newDepositTotal = parseInt(previousDepositTotal) + parseInt(newDepositAmount);
-  
+  console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
   // set deposit total value
-  document.getElementById("deposit-total").innerText = newDepositTotal;
+
+  setTextElementValueById("deposit-total", newDepositTotal);
 
 
   // get previous balance by using the function
   const previousBalanceTotal = document.getElementById("balance-total").innerText;
   const newBalanceTotal = parseInt(previousBalanceTotal)  + parseInt(newDepositAmount);
 
-  document.getElementById("balance-total").innerText = newBalanceTotal;
-
+  setTextElementValueById("balance-total", newBalanceTotal);
 });
